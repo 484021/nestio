@@ -1,6 +1,7 @@
 import { fetchProperties } from "@/lib/utils";
 import FeaturedPropertyCard from "./FeaturedPropertyCard";
 
+
 export default async function FeaturedProperties() {
   const properties = await fetchProperties({
     showFeatured: true,

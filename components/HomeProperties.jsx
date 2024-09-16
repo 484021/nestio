@@ -2,6 +2,7 @@ import PropertyCard from "./PropertyCard";
 import Link from "next/link";
 import { fetchProperties } from "@/lib/utils";
 
+
 export default async function HomeProperties() {
   const data = await fetchProperties();
 
