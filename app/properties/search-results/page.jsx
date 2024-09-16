@@ -30,9 +30,7 @@ export default function SearchResultsPage() {
   }, [location, propertyType]);
 
 
-  if (router.isFallback) {
-    return <div>Loading...</div>
-  }
+
   return (
     <>
       <section className="bg-blue-700 py-4">
@@ -72,7 +70,7 @@ export default function SearchResultsPage() {
           </Link>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {properties.map((property) => (
-              <PropertyCard key={property.id} property={property} />
+              <PropertyCard key={Math.random(1)} property={property} />
             ))}
           </div>
         </div>
