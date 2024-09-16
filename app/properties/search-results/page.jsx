@@ -28,6 +28,11 @@ export default function SearchResultsPage() {
     };
     fetchResults();
   }, [location, propertyType]);
+
+
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   return (
     <>
       <section className="bg-blue-700 py-4">

@@ -63,7 +63,7 @@ export default function PropertyEditForm() {
     };
 
     fetchPropertyData();
-  }, []);
+  }, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

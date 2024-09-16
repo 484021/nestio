@@ -43,6 +43,10 @@ export default function PropertyPage() {
     }
   }, [id, property, isLoading]);
 
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
+
   return (
     <>
       {isLoading && <Spinner loading={isLoading} />}

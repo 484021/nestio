@@ -7,6 +7,7 @@ export default async function FeaturedProperties() {
   });
 
 
+
   return (
     properties.length > 0 && (
       <section className="bg-blue-50 px-4 pt-6 pb-10">
@@ -15,12 +16,9 @@ export default async function FeaturedProperties() {
             Featured Properties
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {
-                properties.map((property) => (
-                    <FeaturedPropertyCard key={property._id} property={property} />
-                ))
-            }
-         
+            {properties.map((property) => (
+              <FeaturedPropertyCard key={property._id} property={property} />
+            ))}
           </div>
         </div>
       </section>

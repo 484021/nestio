@@ -69,6 +69,8 @@ export default function ProfilePage() {
     }
   };
 
+
+
   return (
     // <!-- Profile Section -->
     <section className="bg-blue-50">

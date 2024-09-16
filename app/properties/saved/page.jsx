@@ -28,6 +28,8 @@ export default function SavedProperties() {
     fetchBookmarks();
   }, []);
 
+
+
   return (
     <>
       {loading ? (

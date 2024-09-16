@@ -1,13 +1,15 @@
-import React from "react";
 import PropertyCard from "./PropertyCard";
 import Link from "next/link";
-import {fetchProperties} from "@/lib/utils";
+import { fetchProperties } from "@/lib/utils";
 
 export default async function HomeProperties() {
   const data = await fetchProperties();
+
   const recentProperties = data.properties
     .sort(() => Math.random() - Math.random())
     .slice(0, 3);
+
+
   return (
     <>
       <section className="px-4 py-6">
