@@ -19,7 +19,6 @@ export default function PropertyPage() {
 
   useEffect(() => {
     const fetchPropertyData = async () => {
-      if (!id) return;
       try {
         const fetchedProperty = await fetchProperty(id);
         setProperty(fetchedProperty);
@@ -43,9 +42,7 @@ export default function PropertyPage() {
     }
   }, [id, property, isLoading]);
 
-  if (router.isFallback) {
-    return <div>Loading...</div>
-  }
+
 
   return (
     <>
